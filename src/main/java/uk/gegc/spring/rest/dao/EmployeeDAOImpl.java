@@ -10,7 +10,7 @@ import uk.gegc.spring.rest.entity.Employee;
 import java.util.List;
 
 @Repository
-public class EmployeeDAOImpl implements EmployeeDAO{
+public class EmployeeDAOImpl implements EmployeeDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
@@ -25,7 +25,7 @@ public class EmployeeDAOImpl implements EmployeeDAO{
     @Override
     public void saveEmployee(Employee employee) {
         Session session = sessionFactory.getCurrentSession();
-            session.saveOrUpdate(employee);
+        session.saveOrUpdate(employee);
     }
 
     @Override
